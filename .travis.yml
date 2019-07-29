@@ -1,0 +1,11 @@
+sudo: required
+language: bash
+
+addons:
+  apt:
+    packages:
+      - dar
+      - rsync
+install:
+  - sudo make install PREFIX=/usr LIBDIR=/usr/share/backup-manager PERL5DIR=/usr/share/perl5
+script: t/run-tests.sh
